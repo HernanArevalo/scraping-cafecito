@@ -1,0 +1,74 @@
+
+/* * deadpool eyes*/
+.deadpoolEyes{
+    position: absolute;
+    transform: scale(1.4);
+    top: -100px;
+    left: 0%;
+    animation-name: eyes;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+    z-index: 10;
+}
+
+@keyframes eyes {
+  0% {
+    transform: translateY(-100%) scale(1.4);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateY(0%) scale(1.4);
+    opacity: 1;
+}
+75% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0%) scale(1.4);
+    opacity: 0;
+  }
+}
+
+
+/* * Deadpool logo */
+.deadpoolLogo{
+    position: absolute;
+    transform: scale(1.4);
+    top: -100px;
+    left: 0%;
+    opacity: 0;
+    animation-name: deadpoolLogo;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes deadpoolLogo {
+    0%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* * Entrance div */
+.introDiv{
+    animation-name: introDiv;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+}
+
+@keyframes introDiv {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
