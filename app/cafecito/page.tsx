@@ -1,28 +1,36 @@
 "use client"
-// import {getCafecitoData} from './helpers/getCafecitoData'
+import { useState } from 'react';
 import styles from './alert.module.css'
-import { Intro } from './components/Intro'
-import { useState } from 'react'
+import { Intro } from './components/Intro/Intro'
+import { getCafecitoData } from './helpers/getCafecitoData';
+import { Message } from './components/Message/Message';
 
-interface Donation {
-  donorName: string,
-  donatedCoffees: string,
+export interface Donation {
+  sender: string,
+  amount: string,
   message: string
 }
 
 export default function Cafecito() {
 
-  const [lastDonation, setlastDonation] = useState<Donation>()
+  const [animationActive, setAnimationActive] = useState(true)
 
+  // setInterval(()=>{
+  //   setAnimationActive(!animationActive)
+  //   console.log(animationActive);
+  // }, 6000)
 
-  // const asd = getCafecitoData();
+  const donation:Donation = {
+    sender: 'MrMemo05',
+    amount: '12',
+    message: "mi humilde donación y la ultima hasta que no juguemos al rocket loco, me enojé pero te quiero dea "
+  }
 
   return (
     <div className={`${styles.alertContainer} `}>
+      <Message donation={donation}/>
       <Intro />
       
     </div>
-
-
   )
 }

@@ -1,7 +1,7 @@
-import { chromium } from 'playwright'
+import { chromium } from "playwright";
 
 export const getCafecitoData = async (channel) => {
-  console.log('getCafecitoData function');
+  //console.log('getCafecitoData called');
   const browser = await chromium.launch()
   const page = await browser.newPage()
   await page.goto(`https://cafecito.app/${channel}`)
@@ -35,7 +35,7 @@ export const getCafecitoData = async (channel) => {
   }
 
   // * show the object
-  console.log(donationInfo)
+  //console.log(donationInfo)
 
   // * end conection
   await browser.close()

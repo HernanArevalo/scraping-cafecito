@@ -1,0 +1,73 @@
+.messageDiv{
+    align-items: center;
+    animation-delay: 4s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: messageDiv;
+    background-image: url("/deadpool-500-opacity.png");
+    background-position: 50%;
+    background-size: 140%;
+    box-shadow: 0px 0px 20px white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    opacity: 0;
+    padding: 15px;
+    text-overflow: ellipsis;
+    width: 100%;
+    z-index: 5;
+    
+    
+}
+
+@keyframes messageDiv {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.title{
+    position: relative;
+    top: 0px;
+    margin: 0 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.sender{
+    overflow: hidden;
+    max-height: 33px;
+    display: -webkit-box; /* Mostrar como una caja flexible */
+    -webkit-line-clamp: 1; /* Limitar a 3 líneas de texto */
+    -webkit-box-orient: vertical; /* Orientación vertical */
+
+}
+
+.title span{
+    font-weight: 800;
+    font-size: 25px;
+    color: rgb(148, 0, 0);
+}
+
+.message{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    max-height: 108px;
+    line-height: 20px;
+    display: -webkit-box; /* Mostrar como una caja flexible */
+    -webkit-line-clamp: 4; /* Limitar a 3 líneas de texto */
+    -webkit-box-orient: vertical; /* Orientación vertical */
+    max-height: 108px; /* Altura máxima */
+    overflow: hidden; /* Ocultar el exceso de texto */
+    text-overflow: ellipsis; /* Agregar tres puntos al final del texto truncado */
+}
