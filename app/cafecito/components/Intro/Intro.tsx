@@ -10,9 +10,6 @@ export const Intro = () => {
 
   const introAudio = new Audio("/entrance-sound.mp3")
   
-  // const donation = await getCafecitoData("canvic")
-  // console.log(donation);
-
   const audioRef = useRef(introAudio);
 
   useEffect(() => {
@@ -26,13 +23,8 @@ export const Intro = () => {
 
     
   }, []);
-  const handleAudioEnded = () => {
-    console.log('El audio ha terminado de reproducirse.');
-    // Puedes realizar acciones adicionales aquí después de que el audio haya terminado
-  };
 
-  // Agregar el evento "ended" al elemento de audio
-  audioRef.current.addEventListener('ended', handleAudioEnded);
+  audioRef.current.addEventListener('ended', () => { console.log('El audio ha terminado de reproducirse.') })
   
 
   const handlePlayAudio = () => {
@@ -57,13 +49,17 @@ export const Intro = () => {
         src='/deadpool-eyes.png' 
         width='500' 
         height='500' 
-        alt=''/>
+        alt=''
+        priority
+        />
         <Image 
         className={`${styles.deadpoolLogo}`}
         src='/deadpool-500.png' 
         width='500' 
         height='500' 
-        alt=''/>
+        alt=''
+        priority
+        />
     </div>
       }
 </>

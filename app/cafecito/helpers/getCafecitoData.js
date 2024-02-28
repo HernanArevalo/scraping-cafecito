@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 
-export const getCafecitoData = async (channel) => {
+export const getCafecitoData = async (channel = "canvic") => {
   //console.log('getCafecitoData called');
   const browser = await chromium.launch()
   const page = await browser.newPage()
@@ -29,9 +29,9 @@ export const getCafecitoData = async (channel) => {
 
   // * object with the info
   const donationInfo = {
-    donorName,
-    donatedCoffees,
-    message
+    sender: donorName,
+    amount: donatedCoffees,
+    message: message
   }
 
   // * show the object
